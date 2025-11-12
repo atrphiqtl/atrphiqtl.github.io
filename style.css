@@ -7,13 +7,14 @@ body {
 }
 
 .spinimg {
-    animation: 2s linear infinite spin;
+    animation: 4s linear infinite spin;
     transition: .5s;
     border: 0px white solid;
     width: var(--spinner-size);
     height: var(--spinner-size);
     position: relative;
     z-index: 4;
+    opacity: 30%;
 }
 .spinimg:hover{
     opacity: 0%;
