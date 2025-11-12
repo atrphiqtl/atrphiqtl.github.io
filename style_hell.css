@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+    overflow:hidden;
+    background-image:url(hell_bg16_ext.gif);
+    background-size: cover;
+}
+.allbox{
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+    height: 500px;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    animation: spin 10s linear infinite;
+    transform-origin: top left;
+    background-image: url(/indeximg/spk_ball.clip);
+    background-size: contain;
+    border: 2px white solid;
+
+}
+#rightspin{
+    width:10%;
+    height: var(--height-side);
+    position:absolute;
+    right: 0px;
+    top:40%;
+    border: 2px white solid;
+
+}
+#leftspin{
+    width:10%;
+    height: var(--height-side);
+    position:absolute;
+    left: 0px;
+    top:40%;
+    border: 2px white solid;
+}
+#mainOption{
+    position:absolute;
+    left:5%;
+    top: 5%;
+    height: calc(var(--height-side)*1.8);
+    width: calc(var(--height-side)*1.8);;
+ 
+
+}
+.inAllBox{
+    opacity: 50%;
+    width: 90%;
+    height: 90%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    animation: spin 50s linear infinite;
+    transform-origin: top left;
+    background-image: url(/indeximg/spk_ball.png);
+    background-size: contain;
+}
+
+@keyframes spin{
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+
+:root{
+    --height-side:100px;
+}

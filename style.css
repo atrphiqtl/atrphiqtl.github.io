@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+    cursor: none;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.spinimg {
+    animation: 2s linear infinite spin;
+    transition: .5s;
+    border: 0px white solid;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    position: relative;
+    z-index: 4;
+}
+.spinimg:hover{
+    opacity: 0%;
+}
+#welcome_img{
+    width: calc(var(--spinner-size)*3);
+    height: var(--spinner-size);
+}
+
+#xspin{
+    animation: 2s linear infinite xspin;
+    transition: .5s ease;
+    z-index: 2;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    position:relative;
+}
+#xspin:hover{
+    opacity: 0%;
+}
+
+@keyframes spin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+@keyframes xspin{
+    
+    from{transform: rotate(0deg);}
+    to{transform: rotate(-360deg);}
+}
+#inversefollow{
+    position:fixed;
+    width: calc(var(--spinner-size)*1.33);
+    height: calc(var(--spinner-size)*1.33);
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 99;
+}
+#change{
+    position: relative;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    background-size: contain;
+    border: 0px white;
+    border-style: solid;
+    box-sizing: border-box;
+    animation-fill-mode: forwards;
+    box-sizing:content-box;
+}
+#warning{
+    position:absolute;
+    height:fit-content;
+    width: fit-content;
+    opacity:0%;
+    background-color:white;
+
+}
+#welcome{
+    width: calc(var(--spinner-size)*3);
+    height: var(--spinner-size);
+    display: flex;;
+    justify-content:space-evenly;
+    align-items: center;
+}
+#change:hover ~ #warning{
+    opacity: 100%;
+    
+}
+:root{
+    --spinner-size:8.25vw
+}
+
+
